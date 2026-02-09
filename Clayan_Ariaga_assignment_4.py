@@ -17,5 +17,3 @@ stress_level = int(input("Stress level 0-100:"))# Integer 0-100
 print(f"Welcome {student_name} to the College Life Game")
 print("Here are your starting stats:")
 print(f"GPA: {current_gpa}, Study Hours: {study_hours}, Social Points: {social_points}, Stress Level: {stress_level}")
-
-
