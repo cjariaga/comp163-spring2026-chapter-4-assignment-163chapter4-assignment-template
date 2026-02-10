@@ -69,3 +69,27 @@ else:
     print("Invalid input. Defaulting to standard load.")
     study_hours += 10
     stress_level += 5
+
+# ========================================
+# Step 3: Study Strategy Decision
+# ========================================
+study_options = ["Programming", "Math", "English", "History"]
+print("Pick a subject to focus your study hours on:")
+print(study_options)
+study_choice = input("Your choice: ")
+
+# Validate input using membership operators
+if study_choice not in study_options:
+    print("Invalid choice. No study focus selected.")
+else:
+    # Programming helps more when GPA is lower
+    if study_choice == "Programming" and current_gpa < 3.0:
+        current_gpa += 0.3
+        print("Programming focus helps raise your GPA!")
+    elif study_choice == "Math" or study_choice == "English":
+        current_gpa += 0.1
+        social_points -= 5
+        print(f"Studying {study_choice} boosted GPA but cut into your social life.")
+    else:
+        social_points += 5
+        print(f"Studying {study_choice} gave you balance and better connections.")
