@@ -36,7 +36,7 @@ print("C. Heavy (18 credits)")
 
 choice = input("Your choice: ")
 
-if choice == "A":
+if choice == "A" or choice == "a":
     # Check if GPA is strong enough to benefit from a lighter schedule
     if current_gpa >= 2.0 and current_gpa <= 4.0:
         study_hours += 5
@@ -46,7 +46,7 @@ if choice == "A":
         # Low GPA means even a light schedule feels hard
         stress_level += 5
         print("Even with a light load, low GPA will make it tough.")
-elif choice == "B":
+elif choice == "B" or choice == "b":
     # Standard load is the baseline; perfect GPA reduces stress slightly
     study_hours += 10
     if current_gpa != 4.0:
@@ -54,7 +54,7 @@ elif choice == "B":
     else:
         stress_level += 3
     print("Standard load: balanced but challenging.")
-elif choice == "C":
+elif choice == "C" or choice == "c":
     # Heavy load is only manageable for higher GPA students
     if current_gpa >= 3.5:
         study_hours += 15
