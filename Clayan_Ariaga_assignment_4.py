@@ -7,17 +7,37 @@ Date: February 9, 2026
 Description: This game simulates a student's semester by balancing course load,
 study focus, and stress. Your choices change GPA, study hours, and social points
 and lead to different semester endings.
+AI Usage: AI was used to explain the rubric and make sure all requirement were met.
 """
 
 # ========================================
 # Step 1: Foundation Setup
 # ========================================
 student_name = "Clayan Ariaga"  # Student name displayed in game output
-current_gpa = float(input("Current GPA (1.0-4.0): "))  # Float between 1.0-4.0
-study_hours = int(input("Study hours: "))  # Integer (e.g., 25)
-# Tracks total points earned from social activities
-social_points = int(input("Social points: "))  # Integer (e.g., 50)
-stress_level = int(input("Stress level (0-100): "))  # Integer 0-100
+
+# Get current GPA with input validation
+gpa_input = input("Current GPA (1.0-4.0): ")
+if gpa_input.lower() == 'quit':
+    exit()
+current_gpa = float(gpa_input)
+
+# Get study hours with input validation
+study_hours_input = input("Study hours: ")
+if study_hours_input.lower() == 'quit':
+    exit()
+study_hours = int(study_hours_input)
+
+# Get social points with input validation
+social_points_input = input("Social points: ")
+if social_points_input.lower() == 'quit':
+    exit()
+social_points = int(social_points_input)
+
+# Get stress level with input validation
+stress_level_input = input("Stress level (0-100): ")
+if stress_level_input.lower() == 'quit':
+    exit()
+stress_level = int(stress_level_input)
 
 print(f"Welcome {student_name} to the College Life Game")
 print("Here are your starting stats:")
