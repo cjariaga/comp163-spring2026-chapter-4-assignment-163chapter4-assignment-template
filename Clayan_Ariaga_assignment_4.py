@@ -7,6 +7,7 @@ Date: February 9, 2026
 Description: This game simulates a student's semester by balancing course load,
 study focus, and stress. Your choices change GPA, study hours, and social points
 and lead to different semester endings.
+AI Usage: AI was used to explain the rubric and make sure all requirement were met.
 """
 
 # ========================================
